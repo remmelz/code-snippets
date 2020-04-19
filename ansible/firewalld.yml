@@ -1,0 +1,13 @@
+- name: Ensuring firewall ports are open
+  firewalld:
+    service: "{{ item }}"
+    permanent: yes
+    state: enabled
+  with_items:
+    - https
+    - 80/tcp
+
+- name: Reloading service firewalld
+  systemd:
+    name: firewalld
+    state: reloaded

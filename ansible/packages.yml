@@ -1,0 +1,7 @@
+- name: Installing packages
+  package:
+    name:
+      - example1
+      - example2
+    state: latest
+
