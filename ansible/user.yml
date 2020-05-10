@@ -1,0 +1,7 @@
+- name: Creating user
+  user:
+    name: johnd
+    comment: John Doe
+    uid: 1040
+    groups: admins,developers
+    shell: /bin/bash

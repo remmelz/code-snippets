@@ -1,3 +1,5 @@
+# Check /usr/lib/firewalld/services 
+# for overview of services
 - name: Ensuring firewall ports are open
   firewalld:
     service: "{{ item }}"
@@ -5,8 +7,11 @@
     state: enabled
   with_items:
     - https
-    - 80/tcp
+    - http
+ #notify:
+ # - Reloading service firewalld
 
+# Optional handler
 - name: Reloading service firewalld
   systemd:
     name: firewalld

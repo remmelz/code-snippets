@@ -1,5 +1,6 @@
 - name: Ensuring service is started
   systemd:
+    name: example1
     state: started
-    name: httpd
-
+    enabled: yes
+    daemon_reload: yes

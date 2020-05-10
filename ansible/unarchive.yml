@@ -1,0 +1,5 @@
+- name: Unarchive a file that is already on the remote machine
+  unarchive:
+    src: /tmp/foo.zip
+    dest: /usr/local/bin
+    remote_src: yes
